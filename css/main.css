@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: slackey;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.zoo{
+    height: 90%; 
+    width: 100%; 
+    
+}
+
+.actions{
+    height: 10%; 
+    width: 100%; 
+    background-image: url(../img/SVG/navTexture.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#BanusZoo{
+    background: url(../img/SVG/banusZoo.svg) no-repeat center;
+}
+
+#zooTime{
+    background: url(../img/SVG/currentTime.svg) no-repeat center;
+       color: #ffed00;font-size: 2vw
+}
+#addHour{
+    background: url(../img/SVG/addHour.svg) no-repeat center;
+    cursor: pointer;
+}
+#feedZoo{
+    background: url(../img/SVG/feedAnimals.svg) no-repeat center;
+    cursor: pointer;
+ 
+}
+
+
+
+
+/* textures */ 
+
+.grass{
+    background: url(../img/svg/grassTexture.svg) ;
+
+    background-size: 20%
+}
+
+
+
+/* Cages */
+
+.cage{
+    background-color: #C4C172;
+  
+    border : dashed 10px grey
+}
+
+/* Create Sign Post */
+.cage::after{
+    
+    display: block;
+    content: '';
+    background: url(../img/SVG/signTexture.svg) #906C3E;
+    width: 20%; 
+    padding: 2.5% 0%; 
+    text-align: center; 
+    position: absolute; 
+    bottom: 1%; 
+    right: 1%;
+    font-size: 1vw;
+    color: white;
+    
+    
+}
+
+#monkeys::after{
+    content: 'Monkeys'
+}
+
+
+#giraffes::after{
+    content: 'Giraffes'
+}
+
+
+#elephants::after{
+    content: 'Elephants'
+}
+
+
+
+
+#monkeys{
+    
+    left: 2.5%;
+    top: 62.5%;
+    position: absolute; 
+    height: 35%; 
+    width: 45%;
+  
+    
+}
+
+
+#elephants{
+    
+    left: 52.5%;
+    top: 2.5%;
+    position: absolute; 
+    height: 95%; 
+    width: 45%;
+    
+    
+}
+
+#giraffes{
+    
+     left: 2.5%;
+    top: 2.5%;
+    position: absolute; 
+    height: 55%; 
+    width: 45%;
+
+}
+
+
+
+/* Animals */
+
+.animal{
+    width: 100%;
+    position: absolute;
+    
+}
+
+.monkey{
+    width: 2%;
+    position: relative;
+      float: left;
+    
+}
+
+.elephant{
+    width: 25%;
+     position: relative;
+      float: left;
+}
+
+.giraffe{
+    width: 15%;
+     position: relative;
+      float: left;
+}
+
+/* show health */ 
+.health{
+   float: left;
+
+   
+}

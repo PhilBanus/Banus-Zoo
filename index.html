@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+
+   
+
+    
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    
+<link href="../Banus Zoo/css/main.css" rel="stylesheet" type="text/css">
+    
+    
+    
+    
+<title>Banus Zoo</title>
+
+		
+
+	
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/league-gothic:n4:default;spicy-rice:n4:default;slackey:n4:default.js" type="text/javascript"></script>
+</head>
+    
+    
+    
+
+<body class="bg-dark row m-0">
+    
+    
+    <!--- Nav Bar for actions feed and hour ---> 
+    <div class="col-3 actions h-100 p-4 nav flex-column">
+        
+        <div class="nav-item h-25" id="BanusZoo"></div>
+    
+         <div class="nav-item h-25" id="feedZoo"></div>
+    
+        
+        <div class="nav-item h-25" id="addHour"></div>
+    
+        <div class="nav-item h-25 text-center position-relative" id="zooTime">
+            
+            <table class="h-100 w-100 text-center">
+               <tbody>
+                   
+                   <tr>
+               <td id="DisplayDate" class="align-bottom">&nbsp;</td>
+                   </tr>
+                   <tr>
+      <td id="DisplayTime" class="align-top w-100">&nbsp;</td>
+                   </tr>
+                </tbody>
+                </table>
+                
+                
+                
+                </div>
+    
+        
+    
+        
+       
+       
+
+    </div> 
+    
+    
+    <!--- Zoo area --->
+    
+    <div class="bg-success h-100 rounded zoo mx-auto col-9 grass m-0">
+    
+  <!--- cages ---> 
+         <div class="cage mx-auto" id="elephants" >
+    
+    
+        </div>
+    
+    
+         <div class="cage mx-auto" id="giraffes" >
+    
+    
+        </div>
+
+        
+     
+        <div class="cage mx-auto" id="monkeys">
+          
+        
+        
+        </div>
+     
+    
+    
+   </div>
+    
+    
+    
+    
+<script>
+   
+    
+    
+// set Animal limit in each cage
+var animalLimit = 5; 
+
+
+ 
+    //add animals to cages
+    // use title as variable if animals are alive or dead or pending death
+    var monkey = ' <div class="animal" title="alive"><img src="img/SVG/Monkey.svg" alt="" class="monkey"><span class="health badge"></span></div>';
+for( var i=0; i<animalLimit; i++){
+    $('#monkeys').append(monkey);
+}
+    
+    //set data-closetodeath for elephants to provide a checker when they have been close to death for longer than 1 hour
+       var elephant = ' <div class="animal" title="alive" alt="0"><img src="img/SVG/elephant.svg" data-closeToDeath="0" class="elephant"><span class="health badge"></span></div>';
+for( var i=0; i<animalLimit; i++){
+    $('#elephants').append(elephant);
+}
+    
+    
+       var giraffe = ' <div class="animal" title="alive"><img src="img/SVG/Giraffe.svg" alt="" class="giraffe"><span class="health badge"></span></div>';
+           
+for( var i=0; i<animalLimit; i++){
+    $('#giraffes').append(giraffe);
+}
+
+   
+    
+ // Animate Animals and change size
+    
+    window.onload = AnimalsRoam;
+    
+    
+    function AnimalsRoam(){
+    $('.animal').each(function() {
+    
+        
+        AniAnimal($(this));
+        ChangeSize($(this));
+        
+
+        
+}); }
+
+    
+  
+     
+    
+    
+ 
+</script>
+
+
+	 <script src="http://code.jquery.com/jquery-latest.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	
+<script type="text/javascript" src="../Banus Zoo/js/Variables.js"></script>
+<script type="text/javascript" src="../Banus Zoo/js/FeedAnimals.js"></script>        
+<script type="text/javascript" src="../Banus Zoo/js/RemoveHealth.js"></script>        
+<script type="text/javascript" src="../Banus Zoo/js/SecondChecks.js"></script>  
+      
+	
+	
+</body>
+</html>
